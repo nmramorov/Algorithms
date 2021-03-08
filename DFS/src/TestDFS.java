@@ -7,7 +7,12 @@ public class TestDFS {
         int[][] iterables = {{1, 2, 3}, {0, 4}, {0}, {0, 5}, {1 ,5}, {3, 4, 6, 7}, {5}, {5}};
         Collections.addAll(list, iterables);
 
+        System.out.println("DFS with recursion output:");
         DFS dfs = new DFS(list);
         dfs.executeDFS(0);
+
+        System.out.println("DFS with stack and without recursion output:");
+        DFSWithStack dfsWithStack = new DFSWithStack(list);
+        dfsWithStack.executeDFSWithStack(0);
     }
 }
